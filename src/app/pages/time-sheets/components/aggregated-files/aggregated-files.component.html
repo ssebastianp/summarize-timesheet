@@ -1,1 +1,56 @@
-<p>aggregated-files works!</p>
+<p>original-files works!</p>
+<table
+  mat-table
+  [dataSource]="files"
+>
+  <ng-container matColumnDef="id">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+    > # </th>
+    <td
+      mat-cell
+      *matCellDef="let file"
+    >
+      {{file.id}}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="name">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+    > Nume </th>
+    <td
+      mat-cell
+      *matCellDef="let file"
+    >
+      {{file.name}}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="tasks">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+    > file </th>
+    <td
+      mat-cell
+      *matCellDef="let file"
+    >
+      {{file.file.length}}
+    </td>
+  </ng-container>
+  <tr
+    mat-header-row
+    *matHeaderRowDef="['id', 'name', 'tasks'], sticky: true"
+  >
+  </tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: ['id', 'name', 'tasks'];"
+  >
+  </tr>
+</table>
+<ng-container *ngIf="!cases.length">
+  <div class="no-table-data">Nu există rezultate!</div>
+</ng-container>
