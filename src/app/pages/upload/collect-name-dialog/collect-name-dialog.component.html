@@ -1,1 +1,26 @@
-<p>collect-name-dialog works!</p>
+<h1 mat-dialog-title>Name your file</h1>
+<form
+  [formGroup]="fileNameForm"
+  (ngSubmit)="onSubmit()"
+>
+  <div mat-dialog-content>
+    <div>
+      <mat-form-field>
+        <mat-label>Name of your file</mat-label>
+        <input
+          matInput
+          formControlName="name"
+          placeholder="Name"
+        >
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button
+      mat-button
+      mat-dialog-close
+      cdkFocusInitial
+      type="submit"
+    >Save</button>
+  </div>
+</form>

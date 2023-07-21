@@ -1,1 +1,31 @@
-<router-outlet></router-outlet>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Summarize timesheets</title>
+</head>
+
+<body>
+  <header class="header">
+    <a
+      href="#"
+      class="logo"
+    >Summarize timesheets</a>
+    <nav class="nav-items">
+      <a routerLink="/welcome">Home</a>
+      <a routerLink="/upload">Upload</a>
+      <a routerLink="/time-sheets">Tables</a>
+    </nav>
+  </header>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+
+  <footer>
+    <p>Copyright © 2023</p>
+  </footer>
+
+
+</body>
