@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SavedRawFileModel } from 'src/app/models/saved-raw-file';
 
 @Component({
   selector: 'app-original-files',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./original-files.component.scss']
 })
 export class OriginalFilesComponent {
+  public files: SavedRawFileModel[] = [];
 
 }
